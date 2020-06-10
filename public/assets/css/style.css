@@ -90,7 +90,7 @@ h6 {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .small_heading.main-heading h2 {
@@ -2017,13 +2017,16 @@ ul.pagination li.page-item.active .page-link {
     display: inline-flex;
     flex-direction: row;
 }
-.foot{
+/* .foot{
     flex-direction: row;
     display: inline-flex;
     justify-content: space-between;
-}
+} */
 #maricon{
     justify-content: flex-end !important;
+    float: left !important;
+    margin-right: 60%;
+
 }
 #searchbar{
     justify-content: flex-end !important;

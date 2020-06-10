@@ -1,23 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Alumnis;
+use App\Alumni;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class AlumnisController extends Controller
 {
-    public function formAlumnis(){
+    public function FormAlumni(){
 
-        return view('alumnis.formAlumnis');
+        return view('alumnis.FormAlumni');
     }
 
   public function liste(){
 
 
-    $alumnis= Alumnis::all();
+    $alumnis= Alumni::all();
    
 
-    return view('alumnis.liste');
+    return view('alumnis.liste',compact('alumnis'));
 
   }
 
@@ -34,14 +35,15 @@ class AlumnisController extends Controller
             'etablissement'=>'required|',
             'telephone'=>'required|integer',
             'promotion'=>'required|date',
-            'nationalite'=>'required|',
             'entrepriseActuelle'=>'required|',
-            'fonction'=>'required|'
+            'fonction'=>'required|',
+            'nationalite'=>'required|',
+           
         
       ]);
        
 
-        Alumnis::create($data);
+        Alumni::create($data);
         // Projet::create($data);
 
 

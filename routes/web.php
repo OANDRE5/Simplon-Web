@@ -13,31 +13,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::resource('/', 'welcomecontroller');
+Route::get('success','welcomecontroller@index');
 
-Route::view('/','welcome');
-Route::view('Nos formations', 'Nos formations');
+Route::view('Nos Simplonniens','Nos Simplonniens');
 
-Route::view('Notre Equipes','Notre Equipes'); 
+Route::view('Nous Contacter','Nous Contacter');
 
-Route::view('Nous Contacter', 'Nous Contacter');
+Route::view('Notre Equipe','Notre Equipe');
 
-Route::get('simplonniens', 'SimplonniensController@index');
+Route::get('/admin/actualities','actualitiescontroller@create')->name('root_path');
 
-Route::get('simplonniens/create', 'SimplonniensController@create');
+Route::resource('/admin/actualities', 'actualitiescontroller');
 
-Route::get('projets/formProjet', 'ProjetController@formProjet');
 
-Route::get('alumnis/formAlumnis', 'AlumnisController@formAlumnis');
+Route::get('/portrait', 'ApprenantsController@portrait');
+
+Route::get('/create', 'ApprenantsController@create');
+
+Route::get('alumnis/FormAlumni', 'AlumnisController@FormAlumni');
+
+Route::post('/ajouter', 'ApprenantsController@strore');
+
+Route::post('alumnis', 'AlumnisController@store2');
 
 Route::get('alumnis/liste', 'AlumnisController@liste');
 
-// Route::get('simplonniens', 'SimplonniensController@relation');
+// Route::get('/admin/actualities','evenementscontroller@create')->name('root_path');
 
-Route::post('simplonniens', 'SimplonniensController@store');
+// Route::resource('/admin/actualities', 'evenementscontroller');
 
-Route::post('projets', 'ProjetController@enregister');
 
-Route::post('alumnis', 'AlumnisController@store2');
-    
-    
-  
+
+

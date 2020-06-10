@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
@@ -9,16 +10,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto" id="gauche">
-                    <img src="assets/img/log.png" alt="logo">
+                    <img src="../assets/img/log.png" alt="logo">
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
-                    <li><button class="btn bnt-danger"><a href="index.html">Acceuil</a></button></li>
-                  <li><button class="btn btn-danger"><a href="#" id="men">Nos Formations</a></button></li>
-                  <li><button class="btn btn-danger"><a href="#" id="men">Nos Simplonniens</a></button></li>
-                  <li><button class="btn btn-danger"><a href="#" id="men">Notre equipe</a></button></li>
-                  <li><button class="btn btn-danger"><a href="#" id="men">Contact</a></button></li>
+                    <li><button class="btn bnt-danger"><a href="{{route('index')}}">Acceuil</a></button></li>
+                <li><button class="btn btn-danger"><a href="#" id="men">Nos Formations</a></button></li>
+                  <li><button class="btn btn-danger"><a href="/Nos Simplonniens" id="men">Nos Simplonniens</a></button></li>
+                  <li><button class="btn btn-danger"><a href="/Notre Equipe" id="men">Notre equipe</a></button></li>
+                  <li><button class="btn btn-danger"><a href="/Nous Contacter" id="men">Contact</a></button></li>
                 </ul>
 
             </div>
@@ -29,7 +30,7 @@
     <div>
         <form class="form-inline" id="searchbar">
             <input class="form-control mr-sm-2" type="search" placeholder="Entrer votre recherche" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" id="ser" type="submit" >Rechercher</button>
           </form>
     </div>
 
